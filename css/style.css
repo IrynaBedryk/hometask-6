@@ -1,0 +1,195 @@
+@media (max-width: 1150px){
+  img {max-width: 100%;
+  height: auto;}
+}
+html{
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?87m7qi');
+  src:  url('../fonts/icomoon.eot?87m7qi#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?87m7qi') format('truetype'),
+    url('../fonts/icomoon.woff?87m7qi') format('woff'),
+    url('../fonts/icomoon.svg?87m7qi#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-checkmark:before {
+  content: "\e900";
+}
+.icon-alarm:before {
+  content: "\e901";
+}
+.icon-notice:before {
+  content: "\e903";
+}
+.icon-sad:before {
+  content: "\e9e5";
+}
+body{
+  margin: 0;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}  
+.header:hover{
+  background-color: #f8f9fd;
+  transition: opacity 0.3s ease-in-out;
+}
+.header__inner{
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.header__logo-img{
+  height: 50px;
+}
+.menu-inner{
+  list-style: none;
+  position: relative;
+}
+.menu__logo{
+  margin-left: 10px;
+  background-color: orange;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+}
+.menu-inner:hover .menu__list{
+  height: 130px;
+  overflow: visible;
+  opacity: 1;
+  transition: all .3s;
+}
+.menu-inner::before{
+  content: '\e901';
+  font-family: 'icomoon';
+  position: absolute;
+  left: 15px;
+  font-size: 25px;
+  color: grey;
+  top: 5px;
+}
+.menu__list{
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding: 10px;
+  width: 160px;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  box-shadow: 3px 4px 28px 2px rgba(194,180,194,1);
+  z-index: 1;
+}
+.menu__list-item{
+  padding: 10px;
+  color: #000000;
+}
+.menu__list-name{
+  padding: 10px;
+  color: grey;
+  border-bottom: 1px solid #f8f9fd;
+}
+.menu__list-item:hover{
+  background-color: #f8f9fd;
+  cursor: pointer;
+}
+.error__inner-content{
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.icon-sad{
+  font-size: 100px;
+}
+.error__numbers{
+  font-size: 55px;
+}
+.error__title{
+  font-size: 30px;
+}
+.error__text{
+  font-size: 20px;
+}
+.notification{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.notification__box{
+  width: 250px;
+  min-height: 80px;
+  padding-left: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 4px;
+  color: #ffffff;
+}
+.notification__box::before{
+  font-family: 'icomoon';
+  position: absolute;
+  left: 15px;
+  font-size: 25px;
+}
+.notification__box-title{
+  font-weight: 700;
+}
+.notification__box-error{
+  background-color: rgba(202, 95, 89, 0.9);
+  margin-bottom: 15px;
+  position: relative;
+}
+.notification__box-error::before{
+  content: '\e903';
+}
+.notification__box-success{
+  background-color: rgba(115, 182, 115, 0.9);
+}
+.notification__box-success::before{
+  content: '\e900';
+}
+.notification__box-text{
+  margin: 0;
+}
